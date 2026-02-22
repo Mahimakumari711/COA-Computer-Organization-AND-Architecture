@@ -1,3 +1,5 @@
+Method 1 :
+
 MVI B,80H       
 MVI D,84H      
 MOV A,B       
@@ -10,4 +12,19 @@ CARRY: STA 2020H
 INR C            
 MOV A,C
 STA 3000H       
+HLT
+
+
+Method 2 :
+
+MVI B,80H
+MVI D,84H
+ADD B
+ADD D
+MVI C,00H
+JNC L!
+INR C 
+L!: STA 2021H
+MOV A,C
+STA 2020H
 HLT
