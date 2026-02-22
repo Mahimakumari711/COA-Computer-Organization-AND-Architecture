@@ -1,0 +1,10 @@
+MVI B,80H     
+MVI C,25H      
+MVI D,80H      
+MOV A,B        
+ADD D          
+JZ ZERO       
+DCR C          
+HLT
+ZERO: INR C    
+HLT
