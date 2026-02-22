@@ -1,0 +1,9 @@
+MVI A,84H       
+MVI B,75H       
+ADD B           
+MVI H,00H       
+MOV L,A          
+JNC STORE       
+INR H            
+STORE: SHLD 2020H
+HLT
