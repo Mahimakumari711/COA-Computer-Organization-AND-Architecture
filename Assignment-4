@@ -1,5 +1,0 @@
-MVI A, 25H     
-MVI B, 17H     
-ADD B          
-MOV C, A   
-HLT       
