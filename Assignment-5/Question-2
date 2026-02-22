@@ -1,14 +1,13 @@
-MVI B,80H
-MVI D,84H
-ADD B
-ADD D
-MVI C,00H
-JC T 
-STA 2021H
+MVI B,80H       
+MVI D,84H      
+MOV A,B       
+ADD D         
+MVI C,00H        
+JC CARRY        
+STA 2021H        
 HLT
-
-T: STA 2021H
-INR C
+CARRY: STA 2020H 
+INR C            
 MOV A,C
-STA 2020H
-HLT 
+STA 3000H       
+HLT
