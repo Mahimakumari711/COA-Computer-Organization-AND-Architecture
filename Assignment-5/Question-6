@@ -1,0 +1,16 @@
+MVI A,4AH      
+MOV B,A        
+ANI 0FH        
+MOV C,A         
+MOV A,B         
+ANI F0H          
+MVI D,00H        
+LOOP: CPI 00H
+JZ DONE
+SUI 10H          
+INR D            
+JMP LOOP
+DONE: MOV A,D   
+ADD C            
+STA 2500H       
+HLT
