@@ -1,3 +1,5 @@
+Method 1 :
+
 MVI A,4AH      
 MOV B,A        
 ANI 0FH        
@@ -14,3 +16,19 @@ DONE: MOV A,D
 ADD C            
 STA 2500H       
 HLT
+
+
+Method 2 :
+
+MVI A,45H
+MOV C,A
+ANI 0FH
+MOV B,A
+MOV A,C
+RLC
+RLC
+RLC
+RLC
+ANI 0FH
+ADD B
+HLT 
