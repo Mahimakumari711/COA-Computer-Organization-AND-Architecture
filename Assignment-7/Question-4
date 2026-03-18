@@ -1,0 +1,26 @@
+LXI H, 2100H     
+MVI C, 09H       
+
+OUTER: MOV D, C  
+LXI H, 2100H     
+
+INNER: MOV A, M  
+INX H            
+CMP M            
+
+JC SKIP          
+JZ SKIP          
+
+MOV B, M         
+MOV M, A         
+DCX H            
+MOV M, B         
+INX H            
+
+SKIP: DCR D      
+JNZ INNER        
+
+DCR C            
+JNZ OUTER        
+
+HLT  
