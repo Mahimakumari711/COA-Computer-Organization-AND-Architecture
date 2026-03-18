@@ -14,4 +14,4 @@ DCR C
 JNZ LOOP       
 
 STA 2106H      
-HLT 
+HLT
