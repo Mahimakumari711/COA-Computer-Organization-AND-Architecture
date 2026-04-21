@@ -1,0 +1,32 @@
+function can_vote = check_voting_eligibility(age)
+
+VOTING_AGE = 18;  
+if age >= VOTING_AGE
+    can_vote = true;
+    fprintf('Person aged %d: Eligible to vote.\n', age);
+else
+    can_vote = false;
+    fprintf('Person aged %d: Not eligible to vote (must be %d or older).\n', age, VOTING_AGE);
+end
+end
+
+
+Output :
+
+>> check_voting_eligibility(23)
+Person aged 23: Eligible to vote.
+
+ans =
+
+  logical
+
+   1
+
+>> check_voting_eligibility(12)
+Person aged 12: Not eligible to vote (must be 18 or older).
+
+ans =
+
+  logical
+
+   0
