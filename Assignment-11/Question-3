@@ -1,0 +1,17 @@
+function max_num = find_greatest_three(a, b, c)
+if a >= b && a >= c
+    max_num = a;
+elseif b >= a && b >= c
+    max_num = b;
+else
+    max_num = c;
+end
+end
+
+Output :
+
+>> find_greatest_three(13, 90, 76)
+
+ans =
+
+    90
