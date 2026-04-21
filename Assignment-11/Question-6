@@ -1,0 +1,23 @@
+function print_tables(number)
+
+fprintf('multiplication table\n');
+fprintf('addition table\n');
+fprintf('      ');
+
+for i = 1:6
+    fprintf('%d*%d=%-8d%d+%d=%d\n', number, i, number*i, i-1, 6-i, number);
+end
+
+end
+
+Output :
+
+>> print_tables(7)
+multiplication table
+addition table
+      7*1=7       0+5=7
+7*2=14      1+4=7
+7*3=21      2+3=7
+7*4=28      3+2=7
+7*5=35      4+1=7
+7*6=42      5+0=7
