@@ -1,0 +1,17 @@
+function fact = factorial_recursive(n)
+
+if n <= 1
+    fact = 1;  
+else
+    fact = n * factorial_recursive(n - 1);  
+end
+end
+
+
+Output :
+
+>> factorial_recursive(5)
+
+ans =
+
+   120
