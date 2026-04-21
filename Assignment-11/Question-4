@@ -1,0 +1,42 @@
+function is_prime_flag = is_prime(n)
+
+if n <= 1
+    is_prime_flag = false;
+    fprintf('%d is not a prime number (must be greater than 1).\n', n);
+    return;
+end
+
+if n == 2
+    is_prime_flag = true;
+    fprintf('%d is a prime number.\n', n);
+    return;
+end
+
+if mod(n, 2) == 0
+    is_prime_flag = false;
+    fprintf('%d is not prime (divisible by 2).\n', n);
+    return;
+end
+
+for i = 3:2:sqrt(n)
+    if mod(n, i) == 0
+        is_prime_flag = false;
+        fprintf('%d is not prime (divisible by %d).\n', n, i);
+        return;
+    end
+end
+
+is_prime_flag = true;
+fprintf('%d is a prime number.\n', n);
+end
+
+Output :
+
+>> is_prime(13)
+13 is a prime number.
+
+ans =
+
+  logical
+
+   1
