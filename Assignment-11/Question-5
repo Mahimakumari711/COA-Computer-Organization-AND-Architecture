@@ -1,0 +1,44 @@
+function grade = calculate_grade(m1, m2, m3, m4, m5)
+
+marks = [m1, m2, m3, m4, m5];
+total = sum(marks);
+average = total / 5;
+
+if average >= 60
+    grade_category = 1;
+elseif average >= 50
+    grade_category = 2;
+elseif average >= 30
+    grade_category = 3;
+else
+    grade_category = 4;
+end
+
+switch grade_category
+    case 1
+        grade = '1st division';
+    case 2
+        grade = '2nd division';
+    case 3
+        grade = '3rd division';
+    case 4
+        grade = 'fail';
+    otherwise
+        grade = 'invalid';
+end
+
+fprintf('Marks: [%.0f, %.0f, %.0f, %.0f, %.0f]\n', marks);
+fprintf('Average: %.1f\n', average);
+fprintf('Grade: %s\n', grade);
+end
+
+Output :
+
+>> calculate_grade(90, 78, 89, 88, 96)
+Marks: [90, 78, 89, 88, 96]
+Average: 88.2
+Grade: 1st division
+
+ans =
+
+    '1st division'
