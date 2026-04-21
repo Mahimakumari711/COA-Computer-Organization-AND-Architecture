@@ -1,0 +1,44 @@
+function login_status = user_login()
+
+USERNAME = 'mahima';  
+PASSWORD = 'btech123'; 
+
+attempts = 0;
+max_attempts = 3;
+
+while attempts < max_attempts
+    username = input('Enter username: ', 's');
+    password = input('Enter password: ', 's');
+    
+    attempts = attempts + 1;
+    
+    if strcmp(username, USERNAME) && strcmp(password, PASSWORD)
+        fprintf('Login successful! Welcome %s\n', username);
+        login_status = true;
+        return;
+    else
+        remaining = max_attempts - attempts;
+        if remaining > 0
+            fprintf('Invalid credentials. %d attempts remaining.\n', remaining);
+        else
+            fprintf('Login failed. Account locked after 3 failed attempts.\n');
+        end
+    end
+end
+
+login_status = false;
+end
+
+
+Output :
+
+>> user_login
+Enter username: mahima
+Enter password: btech123
+Login successful! Welcome mahima
+
+ans =
+
+  logical
+
+   1
