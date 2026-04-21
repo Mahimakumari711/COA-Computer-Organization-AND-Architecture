@@ -1,0 +1,15 @@
+ function powers = powers_of_two_below(limit)
+powers = [];
+p = 1;
+while p < limit
+    powers(end+1) = p;
+    p = p * 2;
+end
+end
+
+Output :
+>> powers_of_two_below(100)
+
+ans =
+
+     1     2     4     8    16    32    64
